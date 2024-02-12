@@ -1,0 +1,6 @@
+{
+  "directory": ".",
+  "ignoredDependencies": [
+    "dijit-themes"
+  ]
+}
