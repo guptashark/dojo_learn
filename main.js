@@ -3,8 +3,9 @@ require(
   [
     'dojo/dom',
     'dojo/dom-construct',
-    'demo/myModule'
-  ], function (dom, domConstruct, myModule) {
+    'demo/myModule',
+    'demo/domReadyMyModule'
+  ], function (dom, domConstruct, myModule, domReadyMyModule) {
     var greetingNode = dom.byId('greeting');
     domConstruct.place('<em>Dojo!</em>', greetingNode);
 
@@ -12,5 +13,7 @@ require(
     setTimeout(function () {
         myModule.restoreText('greeting_02');
     }, 3000);
+
+    domReadyMyModule.main();
   }
 );
