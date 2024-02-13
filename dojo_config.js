@@ -8,3 +8,5 @@ var dojoConfig = {
     }
   ]
 };
+
+// A comment.
