@@ -10,6 +10,19 @@
 <body>
 
   <h1 id="greeting">Hello, from Dojo</h1>
+  <h2 id="greeting_02">Hello, number 2 from Dojo</h2>
+
+  <script>
+    var dojoConfig = {
+      async: true,
+      packages: [
+        {
+          name: "demo",
+          location: location.pathname.replace(/\/[^/]*$/, '') + '/demo'
+        }
+      ]
+    };
+  </script>
 
   <script
     src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
@@ -21,10 +34,16 @@
     require(
       [
         'dojo/dom',
-        'dojo/dom-construct'
-      ], function (dom, domConstruct) {
+        'dojo/dom-construct',
+        'demo/myModule'
+      ], function (dom, domConstruct, myModule) {
         var greetingNode = dom.byId('greeting');
         domConstruct.place('<em>Dojo!</em>', greetingNode);
+
+        myModule.setText('greeting_02', 'Hello Dojo!');
+        setTimeout(function () {
+            myModule.restoreText('greeting_02');
+        }, 3000);
       }
     );
 
