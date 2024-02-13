@@ -16,5 +16,6 @@ require(
 
     domReadyMyModule.main();
     // comment 1.
+    // comment 2.
   }
 );
