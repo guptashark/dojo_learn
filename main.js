@@ -17,6 +17,9 @@ require(
     }, 3000);
 
     domReadyMyModule.main();
+
+    // John comment.
+
     // comment 1.
     // comment 2.
     // comment 3.
