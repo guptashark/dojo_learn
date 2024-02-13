@@ -1,3 +1,3 @@
 #!/bin/sh
 
-npx http-server
+live-server
