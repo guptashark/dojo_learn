@@ -9,6 +9,8 @@ require(
     var greetingNode = dom.byId('greeting');
     domConstruct.place('<em>Dojo!</em>', greetingNode);
 
+    // Sam comment.
+
     myModule.setText('greeting_02', 'Hello Dojo!');
     setTimeout(function () {
         myModule.restoreText('greeting_02');
