@@ -1,5 +1,6 @@
 
 var dojoConfig = {
+  // C comment.
   async: true,
   cacheBust: new Date(),
   waitSeconds: 5,
